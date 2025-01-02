@@ -1,0 +1,10 @@
+a-list=[2,3,44,5,56,5,4,64,35,]
+def find_max_in_list(some_list):
+    max_element=some_list[0]
+    length = len(some_list)
+    for i in range(1,length):
+        if some_list[i] > max_element:
+            max_element=some_list[i]
+    return max_element
+z=finde_max_in_list(a_list)
+print(z)
