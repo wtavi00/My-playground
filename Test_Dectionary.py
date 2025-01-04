@@ -1,307 +1,5 @@
-def a_function(): 
-    # This is a reguler for loop useing range function
-    for i in range(3):
-        print("Serial No.",i)
-a_function()
-
-def will_work():
-    # This a conditionla cheak but only cheak for if function
-    print("This indentation is all right")
-    if 10>5:
-        print("Well 10 is greater then 5")
-will_work()
-
-def doc_function():
-    # This program is only for how to save document inside of a program
-    """This function does something that is well documented"""
-    print("This is only for the document")
-print(doc_function.__doc__)
-another_fn=doc_function
-print(another_fn.__doc__)
-def intro(name, city,):
-    """ this is introduction with name and city"""
-    print("HELLO, My name is:", name)
-    print("I work and live in", city)
-intro("Avijit", "Manikganj")
-def my_intro():
-    print("HEllo, this is Avijit")
-    print("I live in Manikganj")
-my_intro()
-def introduction(name, city, school):
-    print("HELLO, My name is:", name)
-    print("I live and work in:", city)
-    print("And I am fro:",school)
-introduction("Avijit Tarafder", "Manikganj","MGHS")
-introduction(name="avijit", city= "mj", school="MGHS")
-def square(x):
-    print("The squareof",x, "is", x*x)
-square(3)
-square(10012)
-num=35
-square(num)
-def sevings(a,b):
-    print("The total sevings is:", a-b)
-sevings(30,5)
-salary= 1000
-expence= 300
-def my_sevings(salary,expence):
-    print("total",salary-expence)
-my_sevings(salary,expence)
-def many_times(string, time):
-    """ This program will give a repit range string a certain amount of time
-        parameters (both requird):
-        string(str): The string to be printed
-        time(int): the number of time the string should be printed
-        No return valus
-    """
-    for i in range(time):
-        print(string)
-many_times("Hello",3)
-print(many_times.__doc__)
-def higher_number(a,b):
-    # Cheaking which number is higher number
-    if a>b:
-        print("The higher number is",a)
-    else:
-        print("The higher number is",b)
-higher_number(20,23)
-higher_number(21,21)
-def multiply(num1,num2,num3):
-    print("Multiply of this three is",num1*num2*num3)
-multiply(2,4,5)
-a_list=[43,4,56,8,89321,3,34,52,62,564,673,54,65,56545]
-b_list=[2,3,4,56,7,8,9,1,10,12,13,14]
-cars_list=["toyota","tata","mazda","bmw"]
-def length(some_list):
-    count=0
-    for element in some_list:
-        count +=1
-    print("The length of the list is", count)
-    return count
-a=length(a_list)
-print(a)
-length(cars_list)
-def list_len(some_list):
-    count=len(some_list)
-    print("length of this list is:", count)
-    return count
-list_len(b_list)
-cars=list_len(cars_list)
-print(cars)
-def finde_max_in_list(some_list):
-    max_element =  some_list[0]
-    length = len(some_list)
-    for i in range(1,length):
-        if some_list[i] > max_element:
-            max_element=some_list[i]
-    return max_element
-z=finde_max_in_list(a_list)
-print(z)
-def finde_max(some_list):
-    count= max(some_list)
-    return count
-x= finde_max(b_list)
-print(x)
-def empty_return(x,y):
-    total= x+y
-    return
-result = empty_return(10,20)
-print(result)
-def add_sub(x,y):
-    add_result=x+y
-    sub_result=x-y
-    return add_result, sub_result
-c=add_sub(5,4)
-print(c)
-result1,result2= add_sub(5,4)
-print(result1, result2)
-result1,_= add_sub(5,4)
-print(result1)
-_,result2= add_sub(5,4)
-print(result2)
-
-def posetive_negetive_zero(num):
-    if num > 0:
-        return "Posetive"
-    elif num <0:
-        return "Negetive"
-    else:
-        return "Zero"
-p=posetive_negetive_zero(2)
-n=posetive_negetive_zero(-1)
-o=posetive_negetive_zero(0)
-print(p,n,o)
-
-empty_list=[]
-def finde_max_in_list(some_list):
-    if len(some_list)==0:
-        print("Zero element list")
-        return None
-    max_element=some_list[0]
-    length=len(some_list)
-    for i in range(1,length):
-        if some_list[i]>max_element:
-            max_element=some_list[i]
-    return max_element
-c=finde_max_in_list(empty_list)
-print(c)
-d=finde_max_in_list(a_list)
-print(d)
-def max_in_empty(some_list):
-    if len(some_list)==0:
-        print("No element presents")
-        return None
-    count=max(some_list)
-    print("This is",count)
-    return count
-max_in_empty(a_list)
-e=max_in_empty(empty_list)
-f=max_in_empty(a_list)
-print(f)
-
-def finde_first_capital(some_string):
-    capital_letter = None
-    for ch in some_string:
-        if ch.upper() == ch and ch != " ":
-            capital_letter= ch
-            break
-    if capital_letter is None:
-        return "No capital letters found"
-    else:
-        return "First capital letter: " + capital_letter
-g=finde_first_capital("Hello, This is Avijit")
-print(g)
-h=finde_first_capital("hello, this is avijit")
-print(h)
-def create_dictionary_intro(name, age, job):
-    dictionary={
-        "Name": name,
-        "Age": age,
-        "Job": job
-    }
-    return dictionary
-i=create_dictionary_intro(name="Avijit", age=21, job="Student")
-print(i)
-def generate_list(name, num_elements):
-    return_list=[]
-    for i in range(num_elements):
-        return_list.append(name)
-    return return_list
-j=generate_list("c_lis", 4)
-print(j)
-def generate_list(name,num):
-    print("Generated list useing for loop")
-    return_list =[name for i in range(num)]
-    return return_list
-print(generate_list("Avi",3))
-
-def calculator(a,b,operator):
-    if operator == "add":
-        return a+b
-    elif operator =="sub":
-        return a-b
-    elif operator =="mul":
-        return a*b
-    elif operator == "div":
-        return a/b
-    else:
-        return "Something is wrong"
-l=calculator(5,3,"add")
-print(l)
-m= calculator(5,4,"sub")
-print(m)
-n=calculator(5,4,"mul")
-print(n)
-o=calculator(10,5,"div")
-print(o)
-
-# Lets perform a error
-p=calculator(10,2,"avi")
-print(p)
-def mul(num1,num2, num3):
-    count=(num1*num2*num3)
-    return count
-print(mul(2,3,4))
-
-def total_score(math,physics, chemistry,biology):
-    print("Math",math,"Physics",physics,"Chemistry",chemistry,"Biology",biology)
-    return (math+physics+chemistry+biology)
-total_score(math=99,physics=40,chemistry=60, biology=89)
-total_score(100,56,chemistry=34,biology=99)
-a= total_score(math=99, physics=40,chemistry=60,biology=89)
-print(a)
-b= total_score(100,56,chemistry=34,biology=99)
-print(b)
-
-print("This program is used for count the total score of:Math,Physics,Chamestry,biology")
-"""This program needs a built in function to assign a value for addation which is float()"""
-def score_total():
-    math=float(input("Math score:"))
-    physics=float(input("Physics:"))
-    chamistry=float(input("Chemistry:"))
-    biology=float(input("Biology:"))
-    total=math+physics+chamistry+biology
-    print("Math:",math, "Physics:",physics, "Chamistry",chamistry, "Biology",biology,"Total:", total)
-    return total
-
-num_list=[3,4,5,2,1,]
-print(sorted(num_list))
-print(sorted(num_list, reverse=True))
-print(sorted(a_list))
-print(sorted(b_list))
-print("Avijit", "Amit","Atul","Lipi",sep="|",end="<")
-
-def student_details(name, school, math, physics, chemistry, biology, enrolled=False):
-    total = math+physics+chemistry+biology
-    print("Name:",name)
-    print("School:",school,"Enrolled:",enrolled)
-    print("Score:",total)
-student_details("Avijit","MGHS",90,34,56,biology=89,enrolled="Yes")
-student_details("Avijit","MGHS", 90,34,43,89)
-
-def print_fn(*args):
-    args_type= type(args)
-    print(args_type)
-    print(args)
-print_fn("Avijit","Atul", "Lipi","Amit")
-z_taple=("Avijit","Atul", "Lipi","Amit")
-print_fn(*z_taple)
-name_list=["Avijit","Atul", "Lipi","Amit"]
-print_fn(*name_list)
-
-def students_in_collage(collage, city,*student):
-    print("Collage:",collage)
-    print("City:",city)
-    print("Student:",student)
-students_in_collage("MGHS", "Manikganj","Avijit","Amit","Atul")
-
-def student_in_collage1(*student,collage="MGHS",city="Manikganj"):
-    print("Collage:",collage)
-    print("City:",city)
-    print("Student:",student)
-student_in_collage1("Avijit","Amit","Atul")
-
-def s_details(**kwargs):
-    """This doble * means that this function will invoke the value in dectionary{}"""
-    print(type(kwargs))
-    print(kwargs)
-s_details(Name="Jhon",Age=21)
-
-def s_details(**details):
-    """This program will give you result on for loop when you are invoking it insted of dictionary"""
-    for key, value in details.items():
-        print(key,value)
-s_details(Name="Avijit",Age="21",City="Dhaka",University="Dhaka")
-
-def s1_detaails(**details):
-    if 'name' in details:
-        print("Name:", details['name'])
-    if 'age' in details:
-        print("Age:", details['age'])
-    if 'collage' in details:
-        print("Collage:", details['collage'])
-s1_detaails(name="Avijit", age=21, collage="Dhaka")
-print("------------------------------------")
+import matplotlib .pyplot as plt
+import numpy as np
 
 def display1(flight_number, seating_capacity):
     print("Flight Number:", flight_number)
@@ -1464,3 +1162,51 @@ print("The smallest number having", num, "divisors:", result)
 
 print("---------------------")
 
+class Vehicle:
+    """A vehicle is identified by its mileage (in kms per litre) and fuel left (in litres) in the vehicle. From the fuel left, 5 litres will always be considered as reserve fuel. At any point of time, the driver of the vehicle may want to know:
+
+the maximum distance that can be covered without using the reserve fuel
+how many kms he/she has already travelled based on the initial fuel the vehicle had
+Identify the class name and attributes so as to represent a vehicle from the information given.
+
+__init__()
+Vehicle
+Car
+identify_disctance_that_can_be_travelled()
+mileage
+fuel_left
+identify_distance_travelled(initial_fuel)
+
+Write a Python program to implement the class chosen with its attributes and methods based on the requirements given below:
+identify_distance_that_can_be_travelled(): Return the distance that can be travelled by the vehicle without using the reserve fuel. If the fuel left is less than or equal to reserve fuel, the method should return 0.
+identify_distance_travelled(initial_fuel): Return the distance so far travelled by the vehicle based on the initial fuel,fuel left and mileage.
+Assume that initial fuel is always greater than fuel left.
+Represent a vehicle and test your program by initializing the instance variables and invoking the appropriate methods."""
+    def __init__(self, mileage, fuel_left):
+        self.mileage = mileage  # in km per litre
+        self.fuel_left = fuel_left  # in litres
+
+    def identify_distance_that_can_be_travelled(self):
+        # Reserve fuel is 5 litres, so we can only use (fuel_left - 5) for travelling
+        reserve_fuel = 5
+        if self.fuel_left <= reserve_fuel:
+            return 0
+        return (self.fuel_left - reserve_fuel) * self.mileage
+
+    def identify_distance_travelled(self, initial_fuel):
+        # Distance travelled is based on the difference between initial and current fuel levels
+        distance_travelled = (initial_fuel - self.fuel_left) * self.mileage
+        return distance_travelled
+
+# Testing the program
+vehicle = Vehicle(mileage=15, fuel_left=10)
+
+initial_fuel = 20  # Example initial fuel in litres
+
+# Find the maximum distance the vehicle can travel without using reserve fuel
+max_distance = vehicle.identify_distance_that_can_be_travelled()
+print(f"Maximum distance that can be travelled without using reserve fuel: {max_distance} km")
+
+# Find the distance travelled based on the initial fuel
+distance_travelled = vehicle.identify_distance_travelled(initial_fuel)
+print(f"Distance already travelled: {distance_travelled} km")
