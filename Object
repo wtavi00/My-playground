@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+
+class Circle(object):
+    # Main function of class circle
+    def __init__(self,radius=5,color="green"):
+        self.radius=radius
+        self.color=color
+    # Add object radius to main function
+    def add_radius(self,r):
+        self.radius=self.radius+r
+        return self.radius
+    # Drow the circle
+    def drowCircle(self):
+        plt.gca().add_patch(plt.Circle((0,0),radius=self.radius,fc=self.color))
+        plt.axis("scaled")
+        plt.show()
+GreenCircle=Circle(20,"green")
+#GreenCircle.drowCircle()
