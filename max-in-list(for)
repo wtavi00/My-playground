@@ -8,3 +8,22 @@ def find_max_in_list(some_list):
     return max_element
 z=finde_max_in_list(a_list)
 print(z)
+
+print("------------------------")
+
+def a_function(): 
+    # This is a reguler for loop useing range function
+    for i in range(3):
+        print("Serial No.",i)
+a_function()
+
+print("------------------------")
+
+def will_work():
+    # This  a conditional cheak but only cheak for if function
+    if 20>5:
+        print("Well 10 is greater then 5
+    else:
+        print("I dont know what to expect")
+will_work()
+
