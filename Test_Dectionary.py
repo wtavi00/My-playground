@@ -112,3 +112,45 @@ func3()
 print("------------------------------------")
 print("code-4")
 print("------------------------------------")
+
+def func4(a,b):
+    if(a>b):
+        print("returns from if block")
+        return a
+    print("returns from outside if block")
+    return b
+print("1st invocation of code-4")
+print("Value returned:",func4(10,5))
+print("------------------------------------")
+print("2nd invocation of code-4")
+print("Value returned:",func4(2,3))
+
+def display(num):
+    message = ""
+    """We initialize the message variable as an empty string.
+Based on the value of num, the function checks:
+If divisible by both 3 and 5, it sets the message to "Zoom".
+If divisible only by 3, the message is set to "Zip".
+If divisible only by 5, the message is set to "Zap".
+If none of the conditions are met, the message is "Invalid".
+Finally, it returns the message.
+"""
+    
+    if num % 3 == 0 and num % 5 == 0:
+        message = "Zoom"
+    elif num % 3 == 0:
+        message = "Zip"
+    elif num % 5 == 0:
+        message = "Zap"
+    else:
+        message = "Invalid"
+    
+    return message
+
+# Provide different values for num and test your program
+message = display(10)
+print(message)  # Expected output: "Zip"
+massage = display(15)
+print(massage)  # Expected output: "Zoom"
+message = display(25)
+print(message)  # Expacted output: "Zap"
