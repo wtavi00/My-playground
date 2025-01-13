@@ -154,3 +154,19 @@ massage = display(15)
 print(massage)  # Expected output: "Zoom"
 message = display(25)
 print(message)  # Expacted output: "Zap"
+
+
+def find_sum_of_digits(number):
+    """Write a Python program to find the sum of digits of a given number. E.g. Sum of number 123 will be 6
+Note: Initialize the number with various values and test your program"""
+    sum_of_digits=0     # Initialize the sum of digits to zero
+    while number>0:     # Continue until the number is reduced to zero
+        sum_of_digits+=number%10    # Add the last digit to the sum
+        number//=10    # Remove the last digit from the number
+    return sum_of_digits
+
+#Provide different values for number and test your program
+sum_of_digits=find_sum_of_digits(123)
+print("Sum of digits:",sum_of_digits)
+sum_of_digits=find_sum_of_digits(234)
+print("The sum of digit you are looking for is:",sum_of_digits)
