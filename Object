@@ -15,4 +15,26 @@ class Circle(object):
         plt.axis("scaled")
         plt.show()
 GreenCircle=Circle(20,"green")
-#GreenCircle.drowCircle()
+GreenCircle.drowCircle()
+
+class Rectangle(object):
+    # Main function of calss rectangle
+    def __init__(self,height=5,width=3,color="green"):
+        self.height=height
+        self.width=width
+        self.color=color
+    # Add object height to main function
+    def add_height(self,h):
+        self.height=self.height+h
+        return self.height
+    # Add object width to main function
+    def add_width(self,w):
+        self.width=self.width+w
+        return self.width
+    # Droe the rectangle
+    def drawRectangle(self):
+        plt.gca().add_patch(plt.Rectangle((0,0),self.width,self.height,fc=self.color))
+        plt.axis("scaled")
+        plt.show()
+rect = Rectangle(height=4, width=6, color="green")
+#rect.drowRectangle()
