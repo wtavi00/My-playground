@@ -39,3 +39,25 @@ def change(c2):
 
 change(c1)
 print(c1.age)
+
+print("------------------------")
+
+def doc_function():
+    # This program is only for how to save document inside of a program
+    """This function does something that is well documented"""
+    print("This is only for the document")
+print(doc_function.__doc__)
+another_fn=doc_function
+print(another_fn.__doc__)
+def intro(name, city,):
+    """ this is introduction with name and city"""
+    print("HELLO, My name is:", name)
+    print("I work and live in", city)
+intro("Avijit", "Manikganj")
+def my_intro():
+    print("HEllo, this is Avijit")
+    print("I live in Manikganj")
+my_intro()
+
+print("------------------------")
+
