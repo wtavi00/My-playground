@@ -62,3 +62,10 @@ my_intro()
 
 print("------------------------")
 
+def introduction(name, city, school):
+    print("HELLO, My name is:", name)
+    print("I live and work in:", city)
+    print("And I am fro:",school)
+introduction("John doe", "Miami","Miami")
+introduction(name="devid", city= "newyork", school="newyork")
+
