@@ -1,9 +1,10 @@
-a-list=[2,3,44,5,56,5,4,64,35,]
+a-list=[2,3,44,5,56,5,4,64,35,] #creating a list for further function iteration
 def find_max_in_list(some_list):
-    max_element=some_list[0]
-    length = len(some_list)
-    for i in range(1,length):
-        if some_list[i] > max_element:
+    max_element=some_list[0] # read the first element
+    length = len(some_list) # count the leagth 
+    for i in range(1,length): # starting for loop fron the second element
+        if some_list[i] > max_element:  # cheak for the maximum value
+
             max_element=some_list[i]
     return max_element
 z=finde_max_in_list(a_list)
@@ -21,8 +22,8 @@ print("------------------------")
 
 def will_work():
     # This  a conditional cheak but only cheak for if function
-    if 20>5:
-        print("Well 10 is greater then 5
+    if 10>5:
+        print("Well 10 is greater then 5")
     else:
         print("I dont know what to expect")
 will_work()
