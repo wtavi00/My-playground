@@ -124,7 +124,7 @@ print("Value returned:",func4(10,5))
 print("------------------------------------")
 print("2nd invocation of code-4")
 print("Value returned:",func4(2,3))
-
+print("\n")
 def display(num):
     message = ""
     """We initialize the message variable as an empty string.
@@ -155,7 +155,7 @@ print(massage)  # Expected output: "Zoom"
 message = display(25)
 print(message)  # Expacted output: "Zap"
 
-
+print("\n")
 def find_sum_of_digits(number):
     """Write a Python program to find the sum of digits of a given number. E.g. Sum of number 123 will be 6
 Note: Initialize the number with various values and test your program"""
@@ -170,3 +170,4 @@ sum_of_digits=find_sum_of_digits(123)
 print("Sum of digits:",sum_of_digits)
 sum_of_digits=find_sum_of_digits(234)
 print("The sum of digit you are looking for is:",sum_of_digits)
+print("\n")
