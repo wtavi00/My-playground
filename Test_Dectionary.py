@@ -171,3 +171,42 @@ print("Sum of digits:",sum_of_digits)
 sum_of_digits=find_sum_of_digits(234)
 print("The sum of digit you are looking for is:",sum_of_digits)
 print("\n")
+def find_product(num1,num2,num3):
+    """Write a python program to find and display the product of three positive integer values based on the rule mentioned below:
+It should display the product of the three values except when one of the integer value is 7. In that case, 7 should not be included in the product and the values to its left also should not be included.
+If there is only one value to be considered, display that value itself. If no values can be included in the product, display -1."""
+    # Create a list of the three integers
+    num_list=[num1,num2,num3]
+    # Cheak If 7 in the list
+    if 7 in num_list:
+        index_seven=num_list.index(7) # Finde the 7
+        num_list=num_list[index_seven +1:]# Consider the values only to the right of 7
+    # If there is no value left, returnt -1
+    if not num_list:
+        return -1
+    product=1  # If there are values, calculate their product
+    for val in num_list:
+        product*=val
+    return product
+
+a=find_product(1,5,3)
+print(a)
+b=find_product(1,5,7)
+print(b)
+print("\n")
+def form_triangle(num1,num2,num3):
+    #Do not change the messages provided below
+    success="Triangle can be formed"
+    failure="Triangle can't be formed"
+
+    if num1+num2>num3 and num1+num3>num2 and num2+num3>num1:
+        return success
+    else:
+        return failure
+
+#Provide different values for the variables, num1, num2, num3 and test your program
+num1=3
+num2=3
+num3=5
+print(form_triangle(num1, num2, num3))
+print("\n")
