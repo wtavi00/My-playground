@@ -228,3 +228,6 @@ def make_amount(rupees_to_make, no_of_five, no_of_one):
     else:
         print(-1)
         
+make_amount(28, 8, 5)  # Expected Output: No. of Five needed : 5, No. of One needed : 3
+make_amount(11, 2, 11) # Expected Output: No. of Five needed : 2, No. of One needed : 1
+make_amount(19, 3, 3)  # Expected Output: -1
