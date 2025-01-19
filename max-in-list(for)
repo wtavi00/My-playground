@@ -67,3 +67,19 @@ def introduction(name, city, school):
 introduction("John doe", "Miami","Miami")
 introduction(name="devid", city= "newyork", school="newyork")
 
+print("------------------------")
+
+def square(x):
+    print("The squareof",x, "is", x*x)
+square(3)
+square(10012)
+num=35
+square(num)
+
+print("------------------------")
+
+def sevings(a,b):
+    print("The total sevings is:", a-b)
+sevings(30,5)
+
+print("------------------------")
