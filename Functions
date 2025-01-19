@@ -83,3 +83,11 @@ def sevings(a,b):
 sevings(30,5)
 
 print("------------------------")
+
+salary= 1000
+expence= 300
+def my_sevings(salary,expence):
+    print("total",salary-expence)
+my_sevings(salary,expence)
+
+print("------------------------")
