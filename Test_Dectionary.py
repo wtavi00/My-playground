@@ -231,3 +231,32 @@ def make_amount(rupees_to_make, no_of_five, no_of_one):
 make_amount(28, 8, 5)  # Expected Output: No. of Five needed : 5, No. of One needed : 3
 make_amount(11, 2, 11) # Expected Output: No. of Five needed : 2, No. of One needed : 1
 make_amount(19, 3, 3)  # Expected Output: -1
+print("\n")
+
+def calculate_bill_amount(food_type, quantity_ordered, distance_in_kms):
+    bill_amount = 0
+    
+    # Define prices
+    VEG_COMBO_PRICE = 120
+    NON_VEG_COMBO_PRICE = 150
+    
+    # Validate inputs
+    if (food_type != 'V' and food_type != 'N') or quantity_ordered < 1 or distance_in_kms <= 0:
+        return -1  # Invalid inputs, return -1
+    
+    # Calculate base price based on food type
+    if food_type == 'V':
+        bill_amount = VEG_COMBO_PRICE * quantity_ordered
+    elif food_type == 'N':
+        bill_amount = NON_VEG_COMBO_PRICE * quantity_ordered
+    
+    # Calculate delivery charges based on distance
+    if distance_in_kms > 3:
+        if distance_in_kms <= 6:
+            bill_amount += (distance_in_kms - 3) * 3  # Charge Rs. 3 for kms between 3 and 6
+        else:
+            bill_amount += (3 * 3)  # Charge Rs. 3 for kms from 4 to 6
+            bill_amount += (distance_in_kms - 6) * 6  # Charge Rs. 6 for kms above 6
+    
+    return bill_amount
+    print()
