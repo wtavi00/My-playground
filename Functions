@@ -9,6 +9,13 @@ def find_max_in_list(some_list):
 z=finde_max_in_list(a_list)
 print(z)
 
+# This is an alternate program following the compavt program
+def finde_max(some_list):
+    count= max(some_list)
+    return count
+x= finde_max(b_list)
+print(x)
+
 print("------------------------")
 
 def a_function(): 
