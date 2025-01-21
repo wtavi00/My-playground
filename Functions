@@ -98,3 +98,17 @@ def my_sevings(salary,expence):
 my_sevings(salary,expence)
 
 print("------------------------")
+
+def many_times(string, time):
+    """ This program will give a repit range string a certain amount of time
+        parameters (both requird):
+        string(str): The string to be printed
+        time(int): the number of time the string should be printed
+        No return valus
+    """
+    for i in range(time):
+        print(string)
+many_times("Hello",3)
+print(many_times.__doc__)
+
+print("------------------------")
