@@ -116,3 +116,14 @@ many_times("Hello",3)
 print(many_times.__doc__)
 
 print("------------------------")
+
+def higher_number(a,b):
+    # Cheaking which number is higher number
+    if a>b:
+        print("The higher number is",a)
+    else:
+        print("The higher number is",b)
+higher_number(20,23)
+higher_number(21,21)
+
+print("---------------------")
