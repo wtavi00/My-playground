@@ -32,6 +32,7 @@ a_function()
 
 print("------------------------")
 
+
 # Conditional check example
 def will_work():
     if 10 > 5:
@@ -152,3 +153,12 @@ higher_number(20, 23)
 higher_number(21, 21)
 
 print("---------------------")
+a_list=[43,4,56,8,89321,3,34,52,62,564,673,54,65,56545]
+b_list=[2,3,4,56,7,8,9,1,10,12,13,14]
+cars_list=["toyota","tata","mazda","bmw"]
+def length(some_list):
+    count=0
+    for element in some_list:
+        count +=1
+    print("The length of the list is", count)
+    return count
