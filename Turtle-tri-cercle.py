@@ -5,10 +5,10 @@ alex = turtle.Turtle()  # create a turtle named alex
 alex.shape("turtle")    # alex looks like a turtle
 
 
-alex.color("green")    # alex has a color
-alex.right(60)         # alex turns 60 degrees right
-alex.left(60)          # alex turns 60 degrees left
-alex.circle(50)        # draws a circle of radius 50
+alex.color("green")
+alex.right(60)
+alex.left(60)
+alex.circle(50)
 #draws circles
 for counter in range(1,4):
     alex.circle(20*counter)
