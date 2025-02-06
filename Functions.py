@@ -162,3 +162,6 @@ def length(some_list):
         count +=1
     print("The length of the list is", count)
     return count
+a=length(a_list)
+print(a)
+length(cars_list)
