@@ -7,6 +7,7 @@ def display1(flight_number, seating_capacity):
 
 print("code-1: positional arguments")
 display1("AI789",200)
+
 #Uncomment and execute the below function call statement and observe the output
 #display1(300,"BA123")
 
@@ -27,6 +28,7 @@ def display3(flight_number, flight_make="Boeing", seating_capacity=150):
 print("\n")
 print("code-3: default arguments")
 display3("AI789","Eagle")
+
 #Uncomment and execute the below function call statements one by one and observe the output
 #display3("BA234")
 #display3("SI678","Qantas",200)
@@ -42,6 +44,7 @@ def display4(passenger_name, *baggage_tuple):
 print("\n")
 print("code-4: variable argument count")
 display4("Jack",12,8,5)
+
 #Uncomment and execute the below function call statements one by one and observe the output
 #display4("Chan",20,12)
 #display4("Henry",23)
@@ -56,6 +59,7 @@ Service Tax: 7% of the ticket amount (including all passengers)
 As it was a holiday season, the airline also offered 10% discount on the final ticket cost (after inclusion of the service tax).
 Find and display the total ticket cost for a group which had adults and children.
 >Test the program with different input values for number of adults and children"""
+    
     adults=37550.0
     children= adults/3
     service_tax= 0.07
@@ -156,6 +160,7 @@ message = display(25)
 print(message)  # Expacted output: "Zap"
 
 print("\n")
+
 def find_sum_of_digits(number):
     """Write a Python program to find the sum of digits of a given number. E.g. Sum of number 123 will be 6
 Note: Initialize the number with various values and test your program"""
@@ -170,7 +175,9 @@ sum_of_digits=find_sum_of_digits(123)
 print("Sum of digits:",sum_of_digits)
 sum_of_digits=find_sum_of_digits(234)
 print("The sum of digit you are looking for is:",sum_of_digits)
+
 print("\n")
+
 def find_product(num1,num2,num3):
     """Write a python program to find and display the product of three positive integer values based on the rule mentioned below:
 It should display the product of the three values except when one of the integer value is 7. In that case, 7 should not be included in the product and the values to its left also should not be included.
@@ -193,7 +200,9 @@ a=find_product(1,5,3)
 print(a)
 b=find_product(1,5,7)
 print(b)
+
 print("\n")
+
 def form_triangle(num1,num2,num3):
     #Do not change the messages provided below
     success="Triangle can be formed"
@@ -209,6 +218,7 @@ num1=3
 num2=3
 num3=5
 print(form_triangle(num1, num2, num3))
+
 print("\n")
 
 def make_amount(rupees_to_make, no_of_five, no_of_one):
