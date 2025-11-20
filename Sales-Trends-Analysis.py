@@ -3,9 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import plotly.express as px
 
-# Load sales data
-data = pd.read_csv('sales_data.csv', parse_dates=['Date'])
-data['Month'] = data['Date'].dt.to_period('M')
 
 # Aggregate sales by month
 monthly_sales = data.groupby('Month')['Sales'].sum().reset_index()
@@ -26,3 +23,22 @@ plt.show()
 fig = px.line(monthly_sales, x='Month', y='Sales', title='Monthly Sales Trends', markers=True)
 fig.update_layout(xaxis_title='Month', yaxis_title='Total Sales')
 fig.show()
+
+
+
+def load_data(file_path):
+  data = pd.read_csv('sales_data.csv', parse_dates=['Date'])
+  data['Month'] = data['Date'].dt.to_period('M')
+  return
+
+def prepare_data(df):
+    # Validate columns, preprocess dates
+
+def plot_matplotlib(monthly_sales):
+    # Draw Matplotlib chart
+
+def plot_plotly(monthly_sales):
+    # Draw Plotly chart
+
+def main():
+    # Orchestrate full workflow
