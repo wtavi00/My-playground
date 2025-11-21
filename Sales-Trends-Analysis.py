@@ -27,9 +27,9 @@ fig.show()
 
 
 def load_data(file_path):
-  data = pd.read_csv('sales_data.csv', parse_dates=['Date'])
-  data['Month'] = data['Date'].dt.to_period('M')
-  return
+   data = pd.read_csv(file_path, parse_dates=['Date'])
+   data['Month'] = data['Date'].dt.to_period('M')
+   return
 
 def prepare_data(df):
     # Validate columns, preprocess dates
