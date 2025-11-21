@@ -24,12 +24,24 @@ fig = px.line(monthly_sales, x='Month', y='Sales', title='Monthly Sales Trends',
 fig.update_layout(xaxis_title='Month', yaxis_title='Total Sales')
 fig.show()
 
-
+# ---------------------------------------------------------
+# Load data safely
+# ---------------------------------------------------------
 
 def load_data(file_path):
-   data = pd.read_csv(file_path, parse_dates=['Date'])
-   data['Month'] = data['Date'].dt.to_period('M')
-   return
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"CSV file not found: {file_path}")
+    
+    try:
+        df = pd.read_csv(file_path, parse_dates=['Date'])
+    except ValueError:
+        raise ValueError("CSV must contain a valid 'Date' column in date format.")
+
+    required_cols = {'Date', 'Sales'}
+    if not required_cols.issubset(df.columns):
+        raise KeyError(f"CSV must contain the columns: {required_cols}")
+
+    return df
 
 def prepare_data(df):
     # Validate columns, preprocess dates
