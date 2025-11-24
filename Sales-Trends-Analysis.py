@@ -4,10 +4,6 @@ import plotly.express as px
 import argparse
 import os
 
-
-# Aggregate sales by month
-monthly_sales = data.groupby('Month')['Sales'].sum().reset_index()
-
 # Plot with Matplotlib
 plt.figure(figsize=(10, 6))
 plt.plot(monthly_sales['Month'].astype(str), monthly_sales['Sales'], marker='o', label='Monthly Sales')
@@ -44,8 +40,14 @@ def load_data(file_path):
 
     return df
 
+# ---------------------------------------------------------
+# Prepare and transform data
+# ---------------------------------------------------------
 def prepare_data(df):
-    # Validate columns, preprocess dates
+    df['Month'] = df['Date'].dt.to_period('M')
+    monthly_sales = df.groupby('Month')['Sales'].sum().reset_index()
+    monthly_sales['Month'] = monthly_sales['Month'].astype(str)
+    return monthly_sales
 
 def plot_matplotlib(monthly_sales):
     # Draw Matplotlib chart
