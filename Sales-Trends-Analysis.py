@@ -4,18 +4,6 @@ import plotly.express as px
 import argparse
 import os
 
-# Plot with Matplotlib
-plt.figure(figsize=(10, 6))
-plt.plot(monthly_sales['Month'].astype(str), monthly_sales['Sales'], marker='o', label='Monthly Sales')
-plt.title('Monthly Sales Trends')
-plt.xlabel('Month')
-plt.ylabel('Total Sales')
-plt.xticks(rotation=45)
-plt.grid()
-plt.legend()
-plt.tight_layout()
-plt.show()
-
 # Plot with Plotly
 fig = px.line(monthly_sales, x='Month', y='Sales', title='Monthly Sales Trends', markers=True)
 fig.update_layout(xaxis_title='Month', yaxis_title='Total Sales')
@@ -49,8 +37,22 @@ def prepare_data(df):
     monthly_sales['Month'] = monthly_sales['Month'].astype(str)
     return monthly_sales
 
+# ---------------------------------------------------------
+# Matplotlib Plot
+# ---------------------------------------------------------
 def plot_matplotlib(monthly_sales):
-    # Draw Matplotlib chart
+    plt.figure(figsize=(10, 6))
+    plt.plot(monthly_sales['Month'], monthly_sales['Sales'],
+             marker='o', label='Monthly Sales')
+
+    plt.title('Monthly Sales Trends')
+    plt.xlabel('Month')
+    plt.ylabel('Total Sales')
+    plt.xticks(rotation=45)
+    plt.grid()
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
 
 def plot_plotly(monthly_sales):
     # Draw Plotly chart
