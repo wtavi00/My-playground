@@ -4,11 +4,6 @@ import plotly.express as px
 import argparse
 import os
 
-# Plot with Plotly
-fig = px.line(monthly_sales, x='Month', y='Sales', title='Monthly Sales Trends', markers=True)
-fig.update_layout(xaxis_title='Month', yaxis_title='Total Sales')
-fig.show()
-
 # ---------------------------------------------------------
 # Load data safely
 # ---------------------------------------------------------
@@ -54,8 +49,23 @@ def plot_matplotlib(monthly_sales):
     plt.tight_layout()
     plt.show()
 
+# ---------------------------------------------------------
+# Plotly Plot
+# ---------------------------------------------------------
 def plot_plotly(monthly_sales):
-    # Draw Plotly chart
+    fig = px.line(
+        monthly_sales,
+        x='Month',
+        y='Sales',
+        title='Monthly Sales Trends',
+        markers=True
+    )
+    fig.update_layout(
+        xaxis_title="Month",
+        yaxis_title="Total Sales"
+    )
+    fig.show()
+
 
 def main():
     # Orchestrate full workflow
