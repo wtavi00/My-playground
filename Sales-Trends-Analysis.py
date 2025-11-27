@@ -66,6 +66,22 @@ def plot_plotly(monthly_sales):
     )
     fig.show()
 
+# ---------------------------------------------------------
+# Plotly Plot
+# ---------------------------------------------------------
+def plot_plotly(monthly_sales):
+    fig = px.line(
+        monthly_sales,
+        x='Month',
+        y='Sales',
+        title='Monthly Sales Trends',
+        markers=True
+    )
+    fig.update_layout(
+        xaxis_title="Month",
+        yaxis_title="Total Sales"
+    )
+    fig.show()
 
-def main():
-    # Orchestrate full workflow
+
+
