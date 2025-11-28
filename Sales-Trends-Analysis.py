@@ -84,4 +84,21 @@ def plot_plotly(monthly_sales):
     fig.show()
 
 
+# ---------------------------------------------------------
+# Main workflow function
+# ---------------------------------------------------------
+def main(file_path, use_matplotlib=True, use_plotly=True):
+    try:
+        df = load_data(file_path)
+        monthly_sales = prepare_data(df)
+
+        if use_matplotlib:
+            plot_matplotlib(monthly_sales)
+
+        if use_plotly:
+            plot_plotly(monthly_sales)
+
+    except Exception as e:
+        print(f"Error: {e}")
+
 
