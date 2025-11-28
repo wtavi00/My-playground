@@ -102,3 +102,20 @@ def main(file_path, use_matplotlib=True, use_plotly=True):
         print(f"Error: {e}")
 
 
+# ---------------------------------------------------------
+# CLI Support
+# ---------------------------------------------------------
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Monthly Sales Visualization Tool")
+    parser.add_argument("csv", help="Path to sales_data.csv file")
+    parser.add_argument("--no-mpl", action="store_true", help="Disable Matplotlib plot")
+    parser.add_argument("--no-plotly", action="store_true", help="Disable Plotly plot")
+
+    args = parser.parse_args()
+
+    main(
+        file_path=args.csv,
+        use_matplotlib=not args.no_mpl,
+        use_plotly=not args.no_plotly
+    )
+    
