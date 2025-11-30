@@ -46,3 +46,18 @@ def student1_details(**details):
         print("Collage:", details['collage'])
 student1_details(name="Jhone Cloud", age=21, collage="London")
 
+a_list=[43,4,56,8,89321,3,34,52,62,564,673,54,65,56545]
+b_list=[2,3,4,56,7,8,9,1,10,12,13,14]
+cars_list=["toyota","tata","mazda","bmw"]
+
+def length(some_list):
+    count=0
+    for i in some_list:
+        count +=1
+    print("The length of the list is", count)
+    return count
+
+a=length(a_list)
+print(a)
+length(cars_list)
+
