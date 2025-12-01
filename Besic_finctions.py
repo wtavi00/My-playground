@@ -61,3 +61,48 @@ a=length(a_list)
 print(a)
 length(cars_list)
 
+def finde_max_in_list(some_list):
+    max_element =  some_list[0]
+    length = len(some_list)
+    for i in range(1,length):
+        if some_list[i] > max_element:
+            max_element=some_list[i]
+    return max_element
+z=finde_max_in_list(a_list)
+print(z)
+
+
+def finde_max(some_list):
+    count= max(some_list)
+    return count
+x= finde_max(b_list)
+print(x)
+
+empty_list=[]
+def finde_max_in_list(some_list):
+    if len(some_list)==0:
+        print("Zero element list")
+        return None
+    max_element=some_list[0]
+    length=len(some_list)
+    for i in range(1,length):
+        if some_list[i]>max_element:
+            max_element=some_list[i]
+    return max_element
+
+c=finde_max_in_list(empty_list)
+print(c)
+d=finde_max_in_list(a_list)
+print(d)
+
+def max_in_empty(some_list):
+    if len(some_list)==0:
+        print("No element presents")
+        return None
+    count=max(some_list)
+    print("This is",count)
+    return count
+max_in_empty(a_list)
+e=max_in_empty(empty_list)
+f=max_in_empty(a_list)
+print(f)
