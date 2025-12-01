@@ -99,3 +99,12 @@ def finde_first_capital(some_string):
         return "No capital letters found"
     else:
         return "First capital letter: " + capital_letter
+
+def create_dictionary_intro(name, age, job):
+    dictionary={
+        "Name": name,
+        "Age": age,
+        "Job": job
+    }
+    return dictionary
+
