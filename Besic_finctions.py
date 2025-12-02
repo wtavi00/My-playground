@@ -101,6 +101,7 @@ def finde_first_capital(some_string):
         return "First capital letter: " + capital_letter
 
 def create_dictionary_intro(name, age, job):
+    """i=create_dictionary_intro(name="Jhon", age=25, job="Student")"""
     dictionary={
         "Name": name,
         "Age": age,
@@ -108,3 +109,12 @@ def create_dictionary_intro(name, age, job):
     }
     return dictionary
 
+def score_total():
+    math=float(input("Math score:"))
+    physics=float(input("Physics:"))
+    chamistry=float(input("Chemistry:"))
+    biology=float(input("Biology:"))
+    total=math+physics+chamistry+biology
+    print("Math:",math, "Physics:",physics, "Chamistry",chamistry, "Biology",biology,"Total:", total)
+    return total
+    
