@@ -117,4 +117,28 @@ def score_total():
     total=math+physics+chamistry+biology
     print("Math:",math, "Physics:",physics, "Chamistry",chamistry, "Biology",biology,"Total:", total)
     return total
-    
+
+def print_fn(*args):
+    args_type= type(args)
+    print(args_type)
+    print(args)
+
+def s_details(**kwargs):
+    """This doble * means that this function will invoke the value in dectionary{}
+    s_details(Name="Jhon",Age=21)
+    """
+    print(type(kwargs))
+    print(kwargs)
+
+def display4(passenger_name, *baggage_tuple):
+    """
+    display4("Jack",12,8,5)
+    display4("Chan",20,12)
+    display4("Henry",23)
+    """
+    print("Passenger name:",passenger_name)
+    total_wt=0
+    for baggage_wt in baggage_tuple:
+        total_wt+=baggage_wt
+    print("Total baggage weight in kg:", total_wt)
+
