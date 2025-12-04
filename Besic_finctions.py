@@ -142,3 +142,47 @@ def display4(passenger_name, *baggage_tuple):
         total_wt+=baggage_wt
     print("Total baggage weight in kg:", total_wt)
 
+'''This program is expected to display all the even numbers
+between 1 and n (both inclusive)'''
+i=1
+n=10
+while(i<=n):
+    if(i%2==0):
+        print(i)
+    i+=1
+
+baggage_count = 100
+no_of_baggage_picked = 0
+while baggage_count > 0:
+    no_of_baggage_picked = 5
+    baggage_count -= no_of_baggage_picked
+    print("No. of baggage remaining:",baggage_count)
+
+
+start = 1 
+end = 20
+step = 2 # step is exceptional the default valu of step is 1
+for number in range(start,end,step):
+    print("The current number is",number)
+print("---------------------------")
+for number in range(1,5):
+    print("The current number is ",number)
+
+print("----------------------------")
+
+for number in range(1,7,2):
+    print("The current number is ", number)
+print("----------------------------")
+
+for number in range(5,0,-1):
+    print("The current number is ", number)
+print("---------------------------")
+start=1
+end=6
+for i in range(start, end):
+    print("The data doesn't exiest for file ",i)
+print("----------------------------")
+def Number(start, end):
+    for i in range(start,end):
+        print("File no.",i)
+Number(1,6)
