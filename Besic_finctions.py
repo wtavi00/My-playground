@@ -238,9 +238,43 @@ print(massage)  # Expected output: "Zoom"
 message = display(25)
 print(message)  # Expacted output: "Zap"
 
+
 def infinite_loop():  #This is an infinite loops, always ensure that loop will terminate in finite number
     counter=5
     while counter >=5:
         print(counter)
         counter=counter+1
+
+flights={"India":19,
+         "Jordan":11,
+         "China":4,
+         "Brazil":1,
+         "Cuba":8
+         }
+
+for i in flights:
+    print(i,flights[i],sep=" }")
+
+crew_details={
+    "Pilot":"Kumar",
+    "Co-pilot":"Raghav",
+    "Head-strewardess":"Malini",
+    "stewardess":"Mala"
+}
+
+for i in crew_details:
+    print(i, crew_details[i], sep=":-")
+
+
+for key,value in crew_details.items():
+    print(key,":", value)
+
+
+print(crew_details.get("Pilot"))
+print(crew_details)
+
+crew_details.update({"Flight Attendant":"Jane",
+                     "Co-pilot":"Henry"})
+print("\nAfter update")
+print(crew_details)
 
