@@ -237,3 +237,10 @@ massage = display(15)
 print(massage)  # Expected output: "Zoom"
 message = display(25)
 print(message)  # Expacted output: "Zap"
+
+def infinite_loop():  #This is an infinite loops, always ensure that loop will terminate in finite number
+    counter=5
+    while counter >=5:
+        print(counter)
+        counter=counter+1
+
