@@ -278,3 +278,35 @@ crew_details.update({"Flight Attendant":"Jane",
 print("\nAfter update")
 print(crew_details)
 
+
+def plindrome():
+    """Write a pseudo-code to check whether a given number is a palindrome.
+Examples of palindrome: 121, 1331, 2332,78900987,123456654321 etc."""
+    number=int(input("Number(Plindrom Number or not):"))
+    temp=number
+    reverse=0
+    while number!=0:
+        remainder=number%10
+        reverse=reverse*10+remainder
+        number=number//10
+
+    if temp==reverse:
+        print("Plindrome")
+    else:
+        print("Not a plindrome")
+
+def armstrong():
+    """A three digit number is said to be an “Armstrong number” if the sum of the third power of its individual digits is equal to the number itself.{371 = 3 3 + 7 3 + 1 3}"""
+    number=int(input("Number(Armstrong number?:"))
+    temp=number
+    sum=0
+    while number!=0:
+        remainder=number%10
+        sum+=remainder**3
+        number//=10
+
+    if temp==sum:
+        print("This is a armstrong number")
+    else:
+        print("This is not a armstrong number")
+
